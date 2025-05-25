@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book2Audio - Free Audiobook Creator</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Book2Audio</h1>
+    <input id="isbnInput" type="text" placeholder="Enter ISBN..." />
+    <button onclick="fetchBook()">Find Book</button>
+  </header>
+  <main>
+    <aside id="notesSection">
+      <h2>Notes</h2>
+      <div id="pageNotes">
+        <h3>Page Notes</h3>
+        <!-- Dynamic notes by page -->
+      </div>
+      <div id="generalNotes">
+        <h3>General Notes</h3>
+        <textarea id="generalNoteInput" placeholder="Type your general notes here..."></textarea>
+      </div>
+    </aside>
+    <section id="bookArea">
+      <div id="toolbar">
+        <button onclick="highlight('yellow')">Highlight Yellow</button>
+        <button onclick="highlight('blue')">Highlight Blue</button>
+        <button onclick="writeOnBook()">Write</button>
+        <button onclick="bookmark()">Bookmark</button>
+        <button onclick="saveSection()">Save Section</button>
+      </div>
+      <div id="bookContent">
+        <!-- Book pages and info will load here -->
+      </div>
+      <div id="noteInputArea">
+        <textarea id="pageNoteInput" placeholder="Type notes for this page..."></textarea>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <audio id="audioPlayer" controls></audio>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
